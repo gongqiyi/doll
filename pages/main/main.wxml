@@ -1,0 +1,39 @@
+<!-- logs.wxml
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view> -->
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<!--首页-->
+<view hidden="{{currentTab!==0}}" style='display:flex;flex-wrap:wrap;'>
+  <!-- <view class='bgp'> -->
+  <view hidden="{{currentTab!==0}}" wx:for="{{device_list}}" id="{{item.device_id}}" style="position:relative;align-content: space-around;justify-content: center;">
+    <view style="position:absolute;top:-23rpx;right:-5rpx">
+      <!-- {{item.state==1?'空闲中':'使用中'}} -->
+      <view wx:if="{{item.state==1}}"> 空闲中 </view>
+      <view wx:elif="{{item.state==2}}"> 使用中 </view>
+      <view wx:else> 维护中中 </view>
+    </view>
+    <image src="{{item.front_cover}}" style='width: 300rpx; height: 300rpx;' mode='scaleToFill'></image>
+    <view style="position:absolute;top:0rpx"> {{item.brilliant}}</view>
+    <view style="position:absolute;top:235rpx;font-size:30rpx"> {{item.toy_name}}</view>
+  </view>
+</view>
+<!-- </view>  -->
+
+<!--搜索-->
+<view hidden="{{currentTab!==1}}">
+  tab_02
+</view>
+
+<!--我-->
+<view hidden="{{currentTab!==2}}">
+  tab_03
+</view>
+<view hidden="{{currentTab!==3}}">
+  tab_04
+</view>

@@ -1,0 +1,9 @@
+<!-- logs.wxml
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view> -->
+<button bindtap="getOpenIdTap">获取用户唯一标识openid</button>  
+<view class="classname">openid:{{openid}}</view>  
+<view class="classname">session_key:{{session_key}}</view>  

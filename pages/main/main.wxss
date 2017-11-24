@@ -1,0 +1,78 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+button{  
+  margin: 10px;  
+  color: white;  
+  background: green;  
+}  
+view{  
+  margin: 10px;  
+}  
+page{ 
+ display: flex; 
+ flex-direction: column; 
+ height: 100%; 
+} 
+.navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #fff; 
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center; 
+ line-height: 80rpx; 
+} 
+.navbar .item.active{ 
+ color: #FFCC00; 
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #FFCC00; 
+} 
+/*网格*/
+
+.grids {
+  display: flex;
+  background: #fff;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+}
+
+.grids .grid-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 60rpx 30rpx;
+  box-sizing: border-box;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.grids .grid-item  image {
+  width: 100%;
+  height: 40rpx;
+  margin-bottom: 15rpx;
+}
+
+.grids .grid-item view {
+  color: #5a5a5a;
+}
